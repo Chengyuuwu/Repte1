@@ -1,1 +1,79 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Permite utilizar letras como ñ y tildes -->
+    <meta charset="UTF-8">
+
+    <!-- Título del navegador -->
+    <title>CalculadoraSMX2</title>
+
+    <!-- Enlaza el CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Enlaza el JS -->
+    <!-- "defer" hace que se ejecute el JS después de cargar el HTML -->
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+    <!-- Contenedor principal de la calculadora -->
+    <div class="calculadora">
+
+        <!-- Pantalla donde aparecen los numeros -->
+        <!-- "disabled" hace que no podamos escribir directamente en la pantalla -->
+        <input type="text" id="pantalla" disabled>
+
+        <!-- Agrupa todos los botones -->
+        <div class="botones">
+
+            <!-- Botón C: limpia toda la pantalla -->
+            <button onclick="limpiar()">C</button>
+
+            <!-- Botón DEL (delete): elimina el último numero o simbolo -->
+            <button onclick="borrar()">DEL</button>
+
+            <!-- Botón de division -->
+            <button onclick="agregar('/')">/</button>
+
+            <!-- Botón de multiplicar -->
+            <button onclick="agregar('*')">×</button>
+
+            <!-- Botones del 7 al 9 -->
+            <button onclick="agregar('7')">7</button>
+            <button onclick="agregar('8')">8</button>
+            <button onclick="agregar('9')">9</button>
+
+            <!-- Botón de restar -->
+            <button onclick="agregar('-')">-</button>
+
+            <!-- Botones del 4 al 6 -->
+            <button onclick="agregar('4')">4</button>
+            <button onclick="agregar('5')">5</button>
+            <button onclick="agregar('6')">6</button>
+
+            <!-- Botón de sumar -->
+            <button onclick="agregar('+')">+</button>
+
+            <!-- Botones del 1 al 3 -->
+            <button onclick="agregar('1')">1</button>
+            <button onclick="agregar('2')">2</button>
+            <button onclick="agregar('3')">3</button>
+
+            <!-- Botón para calcular la operacion -->
+            <button onclick="calcular()">=</button>
+
+            <!-- Botón 0 -->
+            <button onclick="agregar('0')">0</button>
+
+            <!-- Botón para los decimales -->
+            <button onclick="agregar('.')">.</button>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
